@@ -23,6 +23,16 @@ const userRouter = require("./routes/userRoutes");
 
 const app = express();
 
+console.log(
+  "설정확인",
+  MONGO_USER,
+  MONGO_PASSWORD,
+  MONGO_IP,
+  MONGO_PORT,
+  REDIS_URL,
+  REDIS_PORT,
+  SESSION_SECRET
+);
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 
 const connectWithRetry = () => {
